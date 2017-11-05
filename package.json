@@ -1,0 +1,22 @@
+{
+  "name": "bbconf2017-lit-element",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lit-html": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "npm run update-lit",
+    "start": "polymer serve",
+    "test": "polymer test --skip-selenium-install",
+    "lint": "eslint *.js && polymer lint -i *.js",
+    "update-lit": "[ -d node_modules/lit-html/ ] && rm -fr lit-html-no-module && cp -R node_modules/lit-html/ lit-html-no-module && find lit-html-no-module/lib/*.js lit-html-no-module/lit-html.js -exec sed -i 's/export //g' {} \";\""
+  },
+  "author": "",
+  "license": "ISC"
+}

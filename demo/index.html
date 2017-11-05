@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>lion-lit-element demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="bbconf2017-lit-element-example.html">
+
+</head>
+<body>
+<div class="vertical-section-container centered">
+  <h3>Basic lion-lit-element-example demo</h3>
+  <demo-snippet>
+    <template>
+      <bbconf2017-lit-element-example></bbconf2017-lit-element-example>
+      <button onclick="document.querySelector('bbconf2017-lit-element-example').header = 'something new';">Change Header</button>
+      <button onclick="document.querySelector('bbconf2017-lit-element-example').more = 'The Text has changed';">Change More Text</button>
+      <button onclick="document.querySelector('bbconf2017-lit-element-example').items = [{name: 'first'}, {name: 'second'}, {name: 'third'}];">Change Items Array</button>
+      <button onclick="document.querySelector('bbconf2017-lit-element-example').items[0].name = 'should have changed before';">Change first sub item (needs manual update)</button>
+
+      <br /><br />
+      <button onclick="document.querySelector('bbconf2017-lit-element-example').update();">manual update</button>
+    </template>
+  </demo-snippet>
+
+</div>
+</body>
+</html>
